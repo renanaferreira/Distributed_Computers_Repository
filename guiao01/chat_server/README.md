@@ -12,11 +12,15 @@ $ python3 -m venv venv
 ```bash
 $ source venv/bin/activate
 ```
-- Install requirements
+- Install requirements (venv)
 ```bash
 $ pip install -r requirements.txt
 ```
-- Run tests:
+- Turn on server (venv)
+```bash
+$ python3 server.py
+```
+- Run tests (venv)
 ```bash
 $ pytest
 ```
