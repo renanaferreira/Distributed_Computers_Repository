@@ -1,0 +1,7 @@
+mockselector
+mock
+pytest
+freezegun
+pexpect
+
+black
