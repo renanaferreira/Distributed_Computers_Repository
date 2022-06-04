@@ -10,9 +10,9 @@ def test_subscriptions(broker):
     fake_subscriber1 = MagicMock()
     fake_subscriber2 = MagicMock()
 
-    broker.add_subscriber("/t1", fake_subscriber1, Serializer.JSON)
-    broker.add_subscriber("/t2", fake_subscriber1, Serializer.JSON)
-    broker.add_subscriber("/t2", fake_subscriber2, Serializer.PICKLE)
+    broker.subscribe("/t1", fake_subscriber1, Serializer.JSON)
+    broker.subscribe("/t2", fake_subscriber1, Serializer.JSON)
+    broker.subscribe("/t2", fake_subscriber2, Serializer.PICKLE)
 
     assert broker.list_subscriptions("/t1") == [(fake_subscriber1, Serializer.JSON)]
 

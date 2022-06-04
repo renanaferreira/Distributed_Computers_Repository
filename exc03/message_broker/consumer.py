@@ -15,7 +15,6 @@ if __name__ == "__main__":
     parser.add_argument("--length", help="number of messages to be sent", default=10)
     parser.add_argument(
         "--queue_type",
-        nargs="+",
         help="producers queue type",
         choices=list(q_protocol.keys()),
         default=list(q_protocol.keys())[0],

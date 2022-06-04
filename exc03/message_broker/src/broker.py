@@ -163,10 +163,6 @@ class Broker:
         # TODO for testing purposes
         self.users[address] = _format
 
-    # TODO for testing purposes
-    def add_subscriber(self, topic: str, address: socket.socket, serializer: Serializer):
-        self.subscribe(topic, address, _format=serializer)
-
     def unsubscribe(self, topic, address):
         """Unsubscribe to topic by client in address."""
         self.logger.info(f"Cancel subscription of {address} in topic {topic}")
